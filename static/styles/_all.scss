@@ -247,6 +247,289 @@ body {
     }
   }
 
+  // Feature Details
+  // Maxxi Youung
+
+  .maxxi-details {
+    display: flex;
+    text-align: justify;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 14px;
+
+      h2 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      line-height: 15px;
+
+      img {
+        height: 16px;
+      }
+    }
+
+    .maxxibox {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    .pluslist {
+      li {
+        padding: 5px;
+
+        img {
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+  }
+
+  // Modal PBell Mangga Apel
+
+  .mapel-details {
+    display: flex;
+    text-align: justify;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 14px;
+
+      h2 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      line-height: 15px;
+
+      img {
+        height: 16px;
+      }
+    }
+
+    p {
+      line-height: 24px;
+    }
+
+    .mapelbox {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    .komposisi-list {
+      margin-top: 15px;
+      li {
+        padding: 5px;
+
+        img {
+          margin: 0 10px 0 0;
+          height: 13px;
+          background-color: greenyellow;
+          padding: 2px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .modal {
+      p {
+        span {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+  }
+
+  // Modal PBell Strawberry
+
+  .strawberry-details {
+    display: flex;
+    text-align: justify;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 14px;
+
+      h2 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      line-height: 15px;
+
+      img {
+        height: 16px;
+      }
+    }
+
+    p {
+      line-height: 24px;
+    }
+
+    .strawberrybox {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    .komposisi-list {
+      margin-top: 15px;
+      li {
+        padding: 5px;
+
+        img {
+          margin: 0 10px 0 0;
+          height: 13px;
+          background-color: greenyellow;
+          padding: 2px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .modal {
+      p {
+        span {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+  }
+
+  // Modal PBell Eyerain
+
+  .eyerain-details {
+    display: flex;
+    text-align: justify;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 14px;
+
+      h2 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      line-height: 15px;
+
+      img {
+        height: 16px;
+      }
+    }
+
+    p {
+      line-height: 24px;
+    }
+
+    .eyerainbox {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    .komposisi-list {
+      margin-top: 15px;
+      li {
+        padding: 5px;
+
+        img {
+          margin: 0 10px 0 0;
+          height: 13px;
+          background-color: greenyellow;
+          padding: 2px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .modal {
+      p {
+        span {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+  }
+
+  // Modal Alboost
+
+  .alboost-details {
+    display: flex;
+    text-align: justify;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 14px;
+
+      h2 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      line-height: 15px;
+
+      img {
+        height: 16px;
+      }
+    }
+
+    p {
+      line-height: 24px;
+    }
+
+    .alboostbox {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    .komposisi-list {
+      margin-top: 15px;
+      li {
+        padding: 5px;
+
+        img {
+          margin: 0 10px 0 0;
+          height: 13px;
+          background-color: greenyellow;
+          padding: 2px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .modal {
+      p {
+        span {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+  }
+
   .testi-video {
     width: 80%;
     margin: 100px auto;
