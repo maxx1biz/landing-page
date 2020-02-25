@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import Modal from "../modal"
 import pBellStrawberry from "../../../static/images/pbell-strawberry.jpg"
-import pBellBerry from "../../../static/images/p-bell-berry.jpg"
+// import pBellBerry from "../../../static/images/p-bell-berry.jpg"
 import checkLight from "../../../static/images/check-light.svg"
 
 const komposisi = [
@@ -38,7 +38,10 @@ const PbellStrawBerry = () => {
   }
 
   return (
-    <div className={"feature__item"}>
+    <div
+      className={"feature__item product-top"}
+      style={{ border: show ? "2px solid #888" : "none" }}
+    >
       <div className={"row"}>
         <div className={"col-6 first"}>
           <div className={"thumbnail"}>
@@ -59,10 +62,16 @@ const PbellStrawBerry = () => {
         </div>
       </div>
       <div className="row strawberry-details">
+        <div className="col-12">
+          {show ? null : (
+            <div className="show-modal">
+              <button onClick={showModal} style={{ float: "right" }}>
+                Selengkapnya
+              </button>
+            </div>
+          )}
+        </div>
         <Modal show={show} close={closeModal} product="PBell Strawberry">
-          <div className="strawberrybox">
-            <img alt="PBell Berry" src={pBellBerry} />
-          </div>
           <div className="modal">
             <h2>Apa Rahasia PBell Strawberry?</h2>
             <p>
@@ -84,13 +93,6 @@ const PbellStrawBerry = () => {
             </ul>
           </div>
         </Modal>
-        <div className="col-12">
-          <div className="show-modal">
-            <button onClick={showModal} style={{ float: "right" }}>
-              Selengkapnya
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   )

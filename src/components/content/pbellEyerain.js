@@ -2,8 +2,9 @@ import React, { useState } from "react"
 
 import Modal from "../modal"
 import pBellEyeRain from "../../../static/images/pbell-eyerain.jpg"
-import pBellEye from "../../../static/images/p-bell-eyerain.jpg"
 import checkLight from "../../../static/images/check-light.svg"
+import tokopedia from "../../../static/images/tokopedia-logo.png"
+import shopee from "../../../static/images/shopee-logo.png"
 
 const komposisi = [
   "Dextrosa",
@@ -37,7 +38,10 @@ const PbellEyeRain = () => {
   }
 
   return (
-    <div className={"feature__item"}>
+    <div
+      className={"feature__item product-top"}
+      style={{ border: show ? "2px solid #888" : "none" }}
+    >
       <div className={"row"}>
         <div className={"col-6"}>
           <div className={"feature__content"}>
@@ -58,10 +62,14 @@ const PbellEyeRain = () => {
         </div>
       </div>
       <div className="row eyerain-details">
+        <div className="col-12">
+          {show ? null : (
+            <div className="show-modal">
+              <button onClick={showModal}>Selengkapnya</button>
+            </div>
+          )}
+        </div>
         <Modal show={show} close={closeModal} product="PBell Eyerain">
-          <div className="eyerainbox">
-            <img alt="PBell Berry" src={pBellEye} />
-          </div>
           <div className="modal">
             <h2>Apa Rahasia PBell Eyerain?</h2>
             <p>
@@ -81,13 +89,33 @@ const PbellEyeRain = () => {
                 </li>
               ))}
             </ul>
+
+            <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
+              Tersedia di
+            </h3>
+
+            <div className="olshop">
+              <div>
+                <a
+                  href="https://www.tokopedia.com/maxx1biz/pbell-eyerain-suplemen-kesehatan-mata-dan-otak-100-original"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="tokopedia" src={tokopedia} className="tokped" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://shopee.co.id/maxx1bizzofficial/6110864607"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="shopee" src={shopee} className="shopee" />
+                </a>
+              </div>
+            </div>
           </div>
         </Modal>
-        <div className="col-12">
-          <div className="show-modal">
-            <button onClick={showModal}>Selengkapnya</button>
-          </div>
-        </div>
       </div>
     </div>
   )

@@ -2,22 +2,21 @@ import React, { useState } from "react"
 
 import Modal from "../modal"
 import aishi from "../../../static/images/aishi.jpg"
-import aishiBottle from "../../../static/images/aishi-bottle.jpg"
+// import aishiBottle from "../../../static/images/aishi-bottle.jpg"
 import checkLight from "../../../static/images/check-square.svg"
+import tokopedia from "../../../static/images/tokopedia-logo.png"
+import shopee from "../../../static/images/shopee-logo.png"
 
 const komposisi = [
-  "Melancarkan peredaran darah",
-  "Membantu menguatkan stamina tubuh",
-  "Membantu menguatkan daya tahan tubuh",
-  "Membantu menurunkan kadar kolesterol",
-  "Membantu mengatasi diabetes tipe 2",
-  "Membantu melancarkan metabolisme",
-  "Meningkatkan kadar Testosteron & produksi Sperma",
-  "Mencegah gangguan pada Prostat",
-  "Meningkatkan gairan, ketahanan & performa seksual",
-  "Membantu melancarkan Haid",
-  "Membantu menunda masa menopause pada wanita",
-  "Membantu meningkatkan kualitas & keharmonisan hubungan suami-istri",
+  "Mengurangi Rasa Sakit",
+  "Menormalkan Gula Darah dan Kadar Insulin",
+  "Membantu Menormalkan Tekanan Darah",
+  "Memperlancar Sistem Pencernaan",
+  "Mencegah Kanker, Batu Ginjal dan Sakit Liver",
+  "Meluruhkan Lemak Tubuh dan Detoksifikasi",
+  "Mempercepat Penyembuhan Luka",
+  "Membantu penyembuhan Sakit Maag",
+  "Menetralkan Asam Lambung Ditubuh",
 ]
 
 const AishiHydrogen = () => {
@@ -32,7 +31,10 @@ const AishiHydrogen = () => {
   }
 
   return (
-    <div className={"feature__item"}>
+    <div
+      className={"feature__item product-top"}
+      style={{ border: show ? "2px solid #888" : "none" }}
+    >
       <div className={"row"}>
         <div className={"col-6 first"}>
           <div className={"thumbnail"}>
@@ -53,20 +55,24 @@ const AishiHydrogen = () => {
         </div>
       </div>
       <div className="row alboost-details">
+        <div className="col-12">
+          {show ? null : (
+            <div className="show-modal">
+              <button onClick={showModal} style={{ float: "right" }}>
+                Selengkapnya
+              </button>
+            </div>
+          )}
+        </div>
         <Modal show={show} close={closeModal} product="Aishi - Hydrogen Water">
-          <div className="alboostbox">
-            <img alt="AishiHydrogen" src={aishiBottle} />
-          </div>
           <div className="modal">
-            <h2>Dongkrak Stamina dan Vitalitas Anda</h2>
+            <h2>Hidup sehat dimulai dari minum Aishi Hydrogen Water</h2>
             <p>
-              Josie Koffie adalah kopi kesehatan premium yang meningkatkan
-              Stamina dan Vitalitas. Terbuat dari bahan-bahan herbal berkualitas
-              seperti CordyCeps, Guarana, Panax-Ginseng, L-Arginin, & Eurycoma.
+              Maningkatkan Kandungan Antioksidan Hidrogen dan Oksigen dalam air
             </p>
 
             <p style={{ marginTop: 20 }}>
-              Berbagai manfaat minuman kesehatan Josie Koffie :
+              Berbagai manfaat Aishi Hydrogen Water :
             </p>
 
             <ul className="komposisi-list">
@@ -77,15 +83,33 @@ const AishiHydrogen = () => {
                 </li>
               ))}
             </ul>
+
+            <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
+              Tersedia di
+            </h3>
+
+            <div className="olshop">
+              <div>
+                <a
+                  href="https://www.tokopedia.com/maxx1biz/hydrogen-water-generator-aishi-new-generation-tumbler-pem-technology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="tokopedia" src={tokopedia} className="tokped" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://shopee.co.id/maxx1bizzofficial/5110866377"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="shopee" src={shopee} className="shopee" />
+                </a>
+              </div>
+            </div>
           </div>
         </Modal>
-        <div className="col-12">
-          <div className="show-modal">
-            <button onClick={showModal} style={{ float: "right" }}>
-              Selengkapnya
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   )

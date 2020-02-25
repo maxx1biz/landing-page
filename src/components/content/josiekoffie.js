@@ -2,8 +2,10 @@ import React, { useState } from "react"
 
 import Modal from "../modal"
 import josie from "../../../static/images/josie.jpg"
-import josiekoffie from "../../../static/images/josiekoffie.jpg"
+// import josiekoffie from "../../../static/images/josiekoffie.jpg"
 import checkLight from "../../../static/images/check-square.svg"
+import tokopedia from "../../../static/images/tokopedia-logo.png"
+import shopee from "../../../static/images/shopee-logo.png"
 
 const komposisi = [
   "Melancarkan peredaran darah",
@@ -32,7 +34,10 @@ const JosieKoffie = () => {
   }
 
   return (
-    <div className={"feature__item"}>
+    <div
+      className={"feature__item product-top"}
+      style={{ border: show ? "2px solid #888" : "none" }}
+    >
       <div className={"row"}>
         <div className={"col-6"}>
           <div className={"feature__content"}>
@@ -53,10 +58,14 @@ const JosieKoffie = () => {
         </div>
       </div>
       <div className="row alboost-details">
+        <div className="col-12">
+          {show ? null : (
+            <div className="show-modal">
+              <button onClick={showModal}>Selengkapnya</button>
+            </div>
+          )}
+        </div>
         <Modal show={show} close={closeModal} product="Josie Koffie">
-          <div className="alboostbox">
-            <img alt="JosieKoffie" src={josiekoffie} />
-          </div>
           <div className="modal">
             <h2>Dongkrak Stamina dan Vitalitas Anda</h2>
             <p>
@@ -77,13 +86,33 @@ const JosieKoffie = () => {
                 </li>
               ))}
             </ul>
+
+            <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
+              Tersedia di
+            </h3>
+
+            <div className="olshop">
+              <div>
+                <a
+                  href="https://www.tokopedia.com/maxx1biz/josie-koffie-kopi-herbal-stamina-100-bahan-alami-berkualitas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="tokopedia" src={tokopedia} className="tokped" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://shopee.co.id/maxx1bizzofficial/3300690996"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="shopee" src={shopee} className="shopee" />
+                </a>
+              </div>
+            </div>
           </div>
         </Modal>
-        <div className="col-12">
-          <div className="show-modal">
-            <button onClick={showModal}>Selengkapnya</button>
-          </div>
-        </div>
       </div>
     </div>
   )

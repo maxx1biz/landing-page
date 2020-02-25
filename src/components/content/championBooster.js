@@ -2,8 +2,10 @@ import React, { useState } from "react"
 
 import Modal from "../modal"
 import championBooster from "../../../static/images/champion-booster.jpg"
-import champion from "../../../static/images/champion.jpg"
+// import champion from "../../../static/images/champion.jpg"
 import checkLight from "../../../static/images/check-square.svg"
+import tokopedia from "../../../static/images/tokopedia-logo.png"
+import shopee from "../../../static/images/shopee-logo.png"
 
 const komposisi = [
   "Meningkatkan Octane dan Cetane",
@@ -27,7 +29,10 @@ const ChampionBooster = () => {
   }
 
   return (
-    <div className={"feature__item"}>
+    <div
+      className={"feature__item product-top"}
+      style={{ border: show ? "2px solid #888" : "none" }}
+    >
       <div className={"row"}>
         <div className={"col-6 first"}>
           <div className={"thumbnail"}>
@@ -47,10 +52,16 @@ const ChampionBooster = () => {
         </div>
       </div>
       <div className="row alboost-details">
+        <div className="col-12">
+          {show ? null : (
+            <div className="show-modal">
+              <button onClick={showModal} style={{ float: "right" }}>
+                Selengkapnya
+              </button>
+            </div>
+          )}
+        </div>
         <Modal show={show} close={closeModal} product="ChampionBooster">
-          <div className="alboostbox">
-            <img alt="ChampionBooster" src={champion} />
-          </div>
           <div className="modal">
             <h2>Octane & Cetane Booster</h2>
             <p>
@@ -70,15 +81,33 @@ const ChampionBooster = () => {
                 </li>
               ))}
             </ul>
+
+            <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
+              Tersedia di
+            </h3>
+
+            <div className="olshop">
+              <div>
+                <a
+                  href="https://www.tokopedia.com/maxx1biz/champion-booster-penghemat-bbm-octane-booster-1-botol-30ml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="tokopedia" src={tokopedia} className="tokped" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://shopee.co.id/maxx1bizzofficial/2738369130"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="shopee" src={shopee} className="shopee" />
+                </a>
+              </div>
+            </div>
           </div>
         </Modal>
-        <div className="col-12">
-          <div className="show-modal">
-            <button onClick={showModal} style={{ float: "right" }}>
-              Selengkapnya
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   )
