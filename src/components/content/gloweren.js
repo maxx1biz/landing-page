@@ -17,7 +17,7 @@ const komposisi = [
   "Memberikan Nutrisi bagi Kulit",
 ]
 
-const Gloweren = () => {
+const Gloweren = ({ official }) => {
   const [show, setShow] = useState(false)
 
   const showModal = () => {
@@ -84,28 +84,34 @@ const Gloweren = () => {
             </ul>
 
             <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
-              Tersedia di
+              {official === "official" ? "Tersedia di" : "Harga Produk"}
             </h3>
 
             <div className="olshop">
-              <div>
-                <a
-                  href="https://www.tokopedia.com/maxx1biz/gloweren-facial-dan-body-peeling-pemutih-dan-pencerah-kulit-wajah"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="tokopedia" src={tokopedia} className="tokped" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://shopee.co.id/maxx1bizzofficial/4914337819"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="shopee" src={shopee} className="shopee" />
-                </a>
-              </div>
+              {official === "official" ? (
+                <>
+                  <div>
+                    <a
+                      href="https://www.tokopedia.com/maxx1biz/gloweren-facial-dan-body-peeling-pemutih-dan-pencerah-kulit-wajah"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="tokopedia" src={tokopedia} className="tokped" />
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://shopee.co.id/maxx1bizzofficial/4914337819"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="shopee" src={shopee} className="shopee" />
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <h1>Rp. 95.000,-</h1>
+              )}
             </div>
           </div>
         </Modal>

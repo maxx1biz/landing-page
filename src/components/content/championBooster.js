@@ -2,8 +2,11 @@ import React, { useState } from "react"
 
 import Modal from "../modal"
 import championBooster from "../../../static/images/champion-booster.jpg"
-// import champion from "../../../static/images/champion.jpg"
 import checkLight from "../../../static/images/check-square.svg"
+import goGreen from "../../../static/images/go-green.png"
+import sucofindo from "../../../static/images/sucofindo.png"
+import bestQuality from "../../../static/images/best-quality.png"
+import empatpuluh from "../../../static/images/40.png"
 import tokopedia from "../../../static/images/tokopedia-logo.png"
 import shopee from "../../../static/images/shopee-logo.png"
 
@@ -17,7 +20,7 @@ const komposisi = [
   "Membersihkan kerak pada piston",
 ]
 
-const ChampionBooster = () => {
+const ChampionBooster = ({ official }) => {
   const [show, setShow] = useState(false)
 
   const showModal = () => {
@@ -82,29 +85,60 @@ const ChampionBooster = () => {
               ))}
             </ul>
 
+            <h3 style={{ margin: "20px 0 0 0", textAlign: "center" }}>
+              Apa saja Keunggulan Champion Booster ?
+            </h3>
+
+            <div className="row ingridients">
+              <div className="col-3">
+                <img alt="ingridients" src={bestQuality} />
+                <p>Top Product</p>
+              </div>
+              <div className="col-3">
+                <img alt="ingridients" src={goGreen} />
+                <p>Mengurangi Emisi Gas</p>
+              </div>
+              <div className="col-3">
+                <img alt="ingridients" src={sucofindo} />
+                <p>No. 3581BBPAM</p>
+              </div>
+              <div className="col-3">
+                <img alt="ingridients" src={empatpuluh} />
+                <p>Irit BBM Hingga 40%</p>
+              </div>
+            </div>
             <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
-              Tersedia di
+              {official === "official" ? "Tersedia di" : "Harga Produk"}
             </h3>
 
             <div className="olshop">
-              <div>
-                <a
-                  href="https://www.tokopedia.com/maxx1biz/champion-booster-penghemat-bbm-octane-booster-1-botol-30ml"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="tokopedia" src={tokopedia} className="tokped" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://shopee.co.id/maxx1bizzofficial/2738369130"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="shopee" src={shopee} className="shopee" />
-                </a>
-              </div>
+              {official === "official" ? (
+                <>
+                  <div>
+                    <a
+                      href="https://www.tokopedia.com/maxx1biz/champion-booster-penghemat-bbm-octane-booster-1-botol-30ml"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="tokopedia" src={tokopedia} className="tokped" />
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://shopee.co.id/maxx1bizzofficial/2738369130"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="shopee" src={shopee} className="shopee" />
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <div style={{ textAlign: "center" }}>
+                  <h1>Rp. 35.000,- / Pcs</h1>
+                  <h1>Rp. 200.000,- / Box</h1>
+                </div>
+              )}
             </div>
           </div>
         </Modal>

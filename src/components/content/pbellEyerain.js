@@ -26,7 +26,7 @@ const komposisi = [
   "Anggur Bubuk (0,5 %)",
 ]
 
-const PbellEyeRain = () => {
+const PbellEyeRain = ({ official }) => {
   const [show, setShow] = useState(false)
 
   const showModal = () => {
@@ -91,28 +91,34 @@ const PbellEyeRain = () => {
             </ul>
 
             <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
-              Tersedia di
+              {official === "official" ? "Tersedia di" : "Harga Produk"}
             </h3>
 
             <div className="olshop">
-              <div>
-                <a
-                  href="https://www.tokopedia.com/maxx1biz/pbell-eyerain-suplemen-kesehatan-mata-dan-otak-100-original"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="tokopedia" src={tokopedia} className="tokped" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://shopee.co.id/maxx1bizzofficial/6110864607"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="shopee" src={shopee} className="shopee" />
-                </a>
-              </div>
+              {official === "official" ? (
+                <>
+                  <div>
+                    <a
+                      href="https://www.tokopedia.com/maxx1biz/pbell-eyerain-suplemen-kesehatan-mata-dan-otak-100-original"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="tokopedia" src={tokopedia} className="tokped" />
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://shopee.co.id/maxx1bizzofficial/6110864607"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="shopee" src={shopee} className="shopee" />
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <h1>Rp. 250.000,-</h1>
+              )}
             </div>
           </div>
         </Modal>

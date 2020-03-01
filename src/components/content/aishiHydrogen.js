@@ -19,7 +19,7 @@ const komposisi = [
   "Menetralkan Asam Lambung Ditubuh",
 ]
 
-const AishiHydrogen = () => {
+const AishiHydrogen = ({ official }) => {
   const [show, setShow] = useState(false)
 
   const showModal = () => {
@@ -46,10 +46,10 @@ const AishiHydrogen = () => {
           <div className={"feature__content"}>
             <h2>AISI - Hydrogen Water</h2>
             <p>
-              Maxxi Young adalah Micronutrient yang memberikan nutrisi untuk
-              sel-sel pada tubuh kita. Micronutrient sangat dibutuhkan oleh
-              tubuh dalam pembentukan hormon, mengatur fungsi sistem imun &
-              sistem reproduksi
+              Meminum air hidrogen mencegah perkembangan penyakit Parkinson
+              dalam penelitian percobaan pada tikus. Air hidrogen mengurangi
+              stres oksidatif dan mencegah kerusakan kognitif yang terkait
+              dengan demensia dan penyakit Parkinson.
             </p>
           </div>
         </div>
@@ -85,28 +85,34 @@ const AishiHydrogen = () => {
             </ul>
 
             <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
-              Tersedia di
+              {official === "official" ? "Tersedia di" : "Harga Produk"}
             </h3>
 
             <div className="olshop">
-              <div>
-                <a
-                  href="https://www.tokopedia.com/maxx1biz/hydrogen-water-generator-aishi-new-generation-tumbler-pem-technology"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="tokopedia" src={tokopedia} className="tokped" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://shopee.co.id/maxx1bizzofficial/5110866377"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="shopee" src={shopee} className="shopee" />
-                </a>
-              </div>
+              {official === "official" ? (
+                <>
+                  <div>
+                    <a
+                      href="https://www.tokopedia.com/maxx1biz/hydrogen-water-generator-aishi-new-generation-tumbler-pem-technology"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="tokopedia" src={tokopedia} className="tokped" />
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://shopee.co.id/maxx1bizzofficial/5110866377"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="shopee" src={shopee} className="shopee" />
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <h1>Rp. 1.950.000,-</h1>
+              )}
             </div>
           </div>
         </Modal>

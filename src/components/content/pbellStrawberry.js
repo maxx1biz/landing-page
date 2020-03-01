@@ -2,8 +2,10 @@ import React, { useState } from "react"
 
 import Modal from "../modal"
 import pBellStrawberry from "../../../static/images/pbell-strawberry.jpg"
-// import pBellBerry from "../../../static/images/p-bell-berry.jpg"
+
 import checkLight from "../../../static/images/check-light.svg"
+import tokopedia from "../../../static/images/tokopedia-logo.png"
+import shopee from "../../../static/images/shopee-logo.png"
 
 const komposisi = [
   "Serat Jagung",
@@ -26,7 +28,7 @@ const komposisi = [
   "Pengatur Keasaman Asam Sitrat",
 ]
 
-const PbellStrawBerry = () => {
+const PbellStrawBerry = ({ official }) => {
   const [show, setShow] = useState(false)
 
   const showModal = () => {
@@ -91,6 +93,37 @@ const PbellStrawBerry = () => {
                 </li>
               ))}
             </ul>
+
+            <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
+              {official === "official" ? "Tersedia di" : "Harga Produk"}
+            </h3>
+
+            <div className="olshop">
+              {official === "official" ? (
+                <>
+                  <div>
+                    <a
+                      href="https://www.tokopedia.com/maxx1biz/pbell-strawberry-suplemen-herbal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="tokopedia" src={tokopedia} className="tokped" />
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://shopee.co.id/maxx1bizzofficial/3317997090"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="shopee" src={shopee} className="shopee" />
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <h1>Rp. 250.000,-</h1>
+              )}
+            </div>
           </div>
         </Modal>
       </div>

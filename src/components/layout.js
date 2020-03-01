@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
@@ -12,9 +5,10 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import Header from "./header"
 import "../../static/styles/main.scss"
 import logo from "../../static/images/logo-maxx1biz-2.png"
-import iconFacebook from "../../static/images/icon-facebook.svg"
-import iconTwitter from "../../static/images/icon-twitter.svg"
-import iconInstagram from "../../static/images/icon-instagram.svg"
+import iconFacebook from "../../static/images/fb.png"
+import iconTwitter from "../../static/images/twitter.png"
+import iconInstagram from "../../static/images/ig.png"
+import whatsapp from "../../static/images/whatsapp.png"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -102,12 +96,20 @@ const Layout = ({ children }) => (
                 <div className={"widget__item"}>
                   <div className={"social"}>
                     <a
+                      href="https://api.whatsapp.com/send?phone=6282137772815&text=Halo%20mau%20order%20produk%20maxx1biz%20dong"
+                      target={"_blank"}
+                      rel="noopener noreferrer"
+                      title={"Whatsapp"}
+                    >
+                      <img alt={"WhatsApp"} src={whatsapp} height="30" />
+                    </a>
+                    <a
                       href="https://www.facebook.com/Maxx1BizIndonesia/s"
                       target={"_blank"}
                       rel="noopener noreferrer"
                       title={"Facebook"}
                     >
-                      <img alt={"Facebook"} src={iconFacebook} />
+                      <img alt={"Facebook"} src={iconFacebook} height="30" />
                     </a>
                     <a
                       href="https://twitter.com/maxx1biz"
@@ -115,7 +117,7 @@ const Layout = ({ children }) => (
                       rel="noopener noreferrer"
                       title={"Twitter"}
                     >
-                      <img alt={"Twitter"} src={iconTwitter} />
+                      <img alt={"Twitter"} src={iconTwitter} height="30" />
                     </a>
                     <a
                       href="https://www.instagram.com/maxx1biz.ig/"
@@ -123,7 +125,7 @@ const Layout = ({ children }) => (
                       rel="noopener noreferrer"
                       title={"Instagram"}
                     >
-                      <img alt={"Instagram"} src={iconInstagram} />
+                      <img alt={"Instagram"} src={iconInstagram} height="30" />
                     </a>
                   </div>
                 </div>

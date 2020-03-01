@@ -69,8 +69,8 @@ body {
   .page-header {
     text-align: center;
     padding: 100px 0 90px 0;
-    // background-color: #74b9ff;
-    background-image: url("../images/hero-bg.jpg");
+    background-color: #74b9ff;
+    // background-image: url("../images/hero-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0px 0px 40px 40px;
@@ -109,7 +109,7 @@ body {
       box-shadow: 0px 3px 15px -9px rgba(0, 0, 0, 0.75);
     }
 
-    form {
+    .mail-form {
       padding: 75px 0;
       display: inline-block;
 
@@ -133,7 +133,7 @@ body {
         transition: 0.2s ease all;
       }
 
-      button {
+      a {
         cursor: pointer;
         padding: 17px 32px;
         font-size: 17px;
@@ -252,6 +252,45 @@ body {
     border-radius: 10px;
   }
 
+  .ingridients {
+    display: flex;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: $break-small) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .col-3 {
+        width: 47%;
+      }
+    }
+
+    .col-3,
+    .col-6 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      -webkit-box-shadow: 0px 3px 15px -9px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 3px 15px -9px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 3px 15px -9px rgba(0, 0, 0, 0.75);
+      border-radius: 10px;
+      margin: 40px 0 0 0;
+
+      img {
+        padding: 30px 30px;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+      }
+
+      p {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+
   .olshop {
     display: flex;
     justify-content: center;
@@ -319,55 +358,6 @@ body {
         img {
           margin: 0 5px 0 0;
         }
-      }
-    }
-
-    .ingridients {
-      display: flex;
-      justify-content: space-evenly;
-
-      .col-3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: white;
-        -webkit-box-shadow: 0px 3px 15px -9px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 3px 15px -9px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 3px 15px -9px rgba(0, 0, 0, 0.75);
-        border-radius: 10px;
-        margin: 40px 0 0 0;
-
-        img {
-          padding: 30px 30px;
-          width: 100px;
-          height: 100px;
-        }
-
-        p {
-          margin: 0 0 20px 0;
-        }
-      }
-    }
-
-    .olshop {
-      display: flex;
-      justify-content: center;
-      margin: 30px 0 0 0;
-
-      img {
-        padding: 10px 27px;
-        width: 120px;
-        margin: 0 10px;
-        background: white;
-        border-radius: 4px;
-      }
-
-      .tokped {
-        border: 1px solid green;
-      }
-      .shopee {
-        border: 1px solid orangered;
       }
     }
   }
@@ -758,6 +748,49 @@ body {
     }
   }
 
+  // Contact Person
+  .contact-person {
+    padding: 60px 0;
+    margin-bottom: 0;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+
+      span {
+        color: green;
+        font-weight: bold;
+        font-size: 28px;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      margin: 35px 0 0 0;
+      padding: 10px 25px;
+      border: 2px solid #555;
+      border-radius: 5px;
+      background: white;
+
+      img {
+        height: 50px;
+      }
+
+      span {
+        margin-left: 5px;
+        padding: 10px 0 0 0;
+        font-weight: bold;
+        font-size: 30px;
+      }
+    }
+  }
+
   footer {
     padding: 120px 0 45px;
 
@@ -827,15 +860,6 @@ body {
 
         a {
           margin-left: 20px;
-
-          img {
-            filter: contrast(0);
-            transition: 0.15s;
-          }
-
-          &:hover img {
-            filter: contrast(1);
-          }
 
           &:first-child {
             margin-left: 0;

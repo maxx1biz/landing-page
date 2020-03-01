@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
               "https://play.google.com/store/apps/details?id=biz.app.maxxone&hl=en"
             }
           >
-            Get Our App
+            Download App
           </a>
         </div>
       </div>

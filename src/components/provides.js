@@ -12,10 +12,10 @@ export default function Provides() {
           <div className={"col-4"}>
             <div className={"item"}>
               <img alt={"Information"} src={informationImage} />
-              <h3>Our App</h3>
+              <h3>Aplikasi</h3>
               <p>
                 Proses transaksi dan jual beli menjadi lebih prakrtis dengan
-                adanya aplikasi Android dan iOS
+                adanya aplikasi Android
               </p>
             </div>
           </div>
@@ -23,7 +23,7 @@ export default function Provides() {
           <div className={"col-4"}>
             <div className={"item"}>
               <img alt={"Event"} src={ProductivityImage} />
-              <h3>Our Products</h3>
+              <h3>Kualitas Produk</h3>
               <p>
                 Produk dengan sertifikasi yang resmi sehingga kualitasnya sudah
                 terjamin
@@ -34,7 +34,7 @@ export default function Provides() {
           <div className={"col-4"}>
             <div className={"item"}>
               <img alt={"Happiness"} src={happinessImage} />
-              <h3>Ready for Healthy Life</h3>
+              <h3>Siap Untuk Hidup Sehat</h3>
               <p>
                 Dengan banyaknya khasiat dan manfaat, dapat memberi dampak
                 kesehatan yang signfikan

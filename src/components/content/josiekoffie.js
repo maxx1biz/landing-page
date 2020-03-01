@@ -1,9 +1,15 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
+
+import info from "../../../static/images/info.svg"
 
 import Modal from "../modal"
 import josie from "../../../static/images/josie.jpg"
-// import josiekoffie from "../../../static/images/josiekoffie.jpg"
 import checkLight from "../../../static/images/check-square.svg"
+import cordyceps from "../../../static/images/cordyceps.png"
+import ginseng from "../../../static/images/ginseng.png"
+import guarana from "../../../static/images/guarana.png"
+import tongkatAli from "../../../static/images/tongkat-ali.png"
 import tokopedia from "../../../static/images/tokopedia-logo.png"
 import shopee from "../../../static/images/shopee-logo.png"
 
@@ -22,7 +28,7 @@ const komposisi = [
   "Membantu meningkatkan kualitas & keharmonisan hubungan suami-istri",
 ]
 
-const JosieKoffie = () => {
+const JosieKoffie = ({ official }) => {
   const [show, setShow] = useState(false)
 
   const showModal = () => {
@@ -87,29 +93,72 @@ const JosieKoffie = () => {
               ))}
             </ul>
 
+            <h3 style={{ margin: "20px 0 0 0", textAlign: "center" }}>
+              Apa saja Komposisi Josie Kofie ?
+            </h3>
+
+            <div className="row ingridients">
+              <div className="col-3">
+                <img alt="ingridients" src={cordyceps} />
+                <p>Cordyceps</p>
+              </div>
+              <div className="col-3">
+                <img alt="ingridients" src={ginseng} />
+                <p>Panax Ginseng</p>
+              </div>
+              <div className="col-3 bberry">
+                <img alt="ingridients" src={guarana} />
+                <p>Guarana</p>
+              </div>
+              <div className="col-3">
+                <img alt="ingridients" src={tongkatAli} />
+                <p>Tongkat Ali</p>
+              </div>
+            </div>
+
+            <p style={{ fontSize: 13, marginTop: 28 }}>
+              <img
+                alt="info"
+                src={info}
+                style={{ height: 12, margin: "0 10px 0 26px" }}
+              />
+              <Link
+                to="/komposisi"
+                style={{ color: "#333", textDecoration: "underline" }}
+              >
+                Detail khasiat komposisi produk
+              </Link>
+            </p>
+
             <h3 style={{ margin: "40px 0 0 0", textAlign: "center" }}>
-              Tersedia di
+              {official === "official" ? "Tersedia di" : "Harga Produk"}
             </h3>
 
             <div className="olshop">
-              <div>
-                <a
-                  href="https://www.tokopedia.com/maxx1biz/josie-koffie-kopi-herbal-stamina-100-bahan-alami-berkualitas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="tokopedia" src={tokopedia} className="tokped" />
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://shopee.co.id/maxx1bizzofficial/3300690996"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img alt="shopee" src={shopee} className="shopee" />
-                </a>
-              </div>
+              {official === "official" ? (
+                <>
+                  <div>
+                    <a
+                      href="https://www.tokopedia.com/maxx1biz/josie-koffie-kopi-herbal-stamina-100-bahan-alami-berkualitas"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="tokopedia" src={tokopedia} className="tokped" />
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://shopee.co.id/maxx1bizzofficial/3300690996"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img alt="shopee" src={shopee} className="shopee" />
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <h1>Rp. 295.000,-</h1>
+              )}
             </div>
           </div>
         </Modal>
