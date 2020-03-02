@@ -139,7 +139,7 @@ const MaxxiYoung = ({ official }) => {
                 style={{ height: 12, margin: "0 10px 0 26px" }}
               />
               <Link
-                to="/komposisi"
+                to="/komposisi-maxxiyoung"
                 style={{ color: "#333", textDecoration: "underline" }}
               >
                 Detail khasiat komposisi produk

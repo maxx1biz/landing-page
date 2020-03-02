@@ -10,29 +10,16 @@ import solarVitis from "../../static/images/solar-vitis.png"
 import vitC from "../../static/images/vit-c.png"
 import redBeet from "../../static/images/red-beet.png"
 import glutathione from "../../static/images/glutathione.png"
-import cordyceps from "../../static/images/cordyceps.png"
-import ginseng from "../../static/images/ginseng.png"
-import guarana from "../../static/images/guarana.png"
-import tongkatAli from "../../static/images/tongkat-ali.png"
 
-export default function Komposisi() {
+export default function KomposisiMaxxiyoung() {
   return (
     <Layout>
-      <SEO title="Komposisi Product" />
+      <SEO title="Komposisi Produk Maxxi Young" />
 
       <div className="container">
-        <h1>KOMPOSISI PRODUCT</h1>
+        <h1>Komposisi Maxxi Young</h1>
 
         <div>
-          <h2
-            style={{
-              margin: "70px 0 40px 0",
-              textAlign: "center",
-            }}
-          >
-            Komposisi yang terdapat pada Maxxi Young
-          </h2>
-
           <div className="row komposisi-detail">
             <div className="col-6 kompo">
               <img alt="snowalgae" src={snowAlgae} />
@@ -121,55 +108,6 @@ export default function Komposisi() {
                 kadar tannin yang tinggi. Anggur stemsel melindungi dan menjaga
                 aktivitas sel-sel induk epidermal - bahkan dalam kasus stres
                 yang disebabkan oleh UV.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h2
-            style={{
-              margin: "70px 0 40px 0",
-              textAlign: "center",
-            }}
-          >
-            Komposisi yang terdapat pada Koffie Jossie
-          </h2>
-
-          <div className="row komposisi-detail">
-            <div className="col-6 kompo">
-              <img alt="glutathione" src={cordyceps} />
-              <h3>Cordyceps</h3>
-              <p>
-                Memerangi sel kanker dan tumor, menambah stamina, meringankan
-                gangguan pernapasan.
-              </p>
-            </div>
-            <div className="col-6 kompo">
-              <img alt="solarvitis" src={ginseng} />
-              <h3>Panax Ginseng</h3>
-              <p>
-                Bermanfaat bagi daya taha tubuh, anti disfungsi erekse dan
-                meningkatkan jumlah sperma.
-              </p>
-            </div>
-          </div>
-
-          <div className="row komposisi-detail">
-            <div className="col-6 kompo">
-              <img alt="glutathione" src={guarana} />
-              <h3>Guarana</h3>
-              <p>
-                Superfood berkafein tinggi ini efektif menambah energi, gairah
-                (terutama pria) dan menurunkan kolesterol.
-              </p>
-            </div>
-            <div className="col-6 kompo">
-              <img alt="solarvitis" src={tongkatAli} />
-              <h3>Tongkat Ali</h3>
-              <p>
-                Telah lama diknal untuk meningkatkan libido, stamina seksual dan
-                kesuburan.
               </p>
             </div>
           </div>

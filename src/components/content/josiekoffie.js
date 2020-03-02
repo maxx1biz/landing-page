@@ -123,7 +123,7 @@ const JosieKoffie = ({ official }) => {
                 style={{ height: 12, margin: "0 10px 0 26px" }}
               />
               <Link
-                to="/komposisi"
+                to="/komposisi-koffie-jossie"
                 style={{ color: "#333", textDecoration: "underline" }}
               >
                 Detail khasiat komposisi produk
